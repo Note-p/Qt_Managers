@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1500</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1500</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Hotel Manager</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QTableView" name="tableView">
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>185</number>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>100</number>
+        </attribute>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1500</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menucustomer">
+    <property name="title">
+     <string>Customer</string>
+    </property>
+    <addaction name="actionadd_customer"/>
+    <addaction name="actionedit_customer"/>
+    <addaction name="actiondelete_customer"/>
+   </widget>
+   <widget class="QMenu" name="menuroom">
+    <property name="title">
+     <string>Room</string>
+    </property>
+    <addaction name="actionadd_room"/>
+    <addaction name="actionedit_room"/>
+    <addaction name="actiondelete_room"/>
+   </widget>
+   <widget class="QMenu" name="menuview">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionshow_all"/>
+    <addaction name="actionshow_room"/>
+    <addaction name="actionshow_customer"/>
+    <addaction name="actionshow_available_room"/>
+   </widget>
+   <widget class="QMenu" name="menuaction">
+    <property name="title">
+     <string>Action</string>
+    </property>
+    <widget class="QMenu" name="menucheck_in">
+     <property name="title">
+      <string>check in</string>
+     </property>
+     <addaction name="actionordinary_customer"/>
+     <addaction name="actionVIP_SVIP"/>
+    </widget>
+    <widget class="QMenu" name="menureservation">
+     <property name="title">
+      <string>reservation</string>
+     </property>
+     <addaction name="actionordinary"/>
+     <addaction name="actionVIP_SVIP_2"/>
+    </widget>
+    <addaction name="menucheck_in"/>
+    <addaction name="action"/>
+    <addaction name="menureservation"/>
+   </widget>
+   <widget class="QMenu" name="menusort">
+    <property name="title">
+     <string>Sort</string>
+    </property>
+    <widget class="QMenu" name="menucustomer_2">
+     <property name="title">
+      <string>customer</string>
+     </property>
+     <addaction name="actionby_number"/>
+     <addaction name="actionby_name"/>
+     <addaction name="actionby_type"/>
+     <addaction name="actionby_check_in_time"/>
+     <addaction name="actionby_check_out_time"/>
+     <addaction name="actionby_point"/>
+    </widget>
+    <widget class="QMenu" name="menuroom_2">
+     <property name="title">
+      <string>room</string>
+     </property>
+     <addaction name="actionby_number_2"/>
+     <addaction name="actionby_type_2"/>
+     <addaction name="actionby_price"/>
+     <addaction name="actionby_usage"/>
+     <addaction name="actionby_clean_situation"/>
+    </widget>
+    <addaction name="menucustomer_2"/>
+    <addaction name="menuroom_2"/>
+   </widget>
+   <addaction name="menuroom"/>
+   <addaction name="menucustomer"/>
+   <addaction name="menuview"/>
+   <addaction name="menuaction"/>
+   <addaction name="menusort"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionadd_customer">
+   <property name="text">
+    <string>add customer</string>
+   </property>
+  </action>
+  <action name="actionedit_customer">
+   <property name="text">
+    <string>edit customer</string>
+   </property>
+  </action>
+  <action name="actiondelete_customer">
+   <property name="text">
+    <string>delete customer</string>
+   </property>
+  </action>
+  <action name="actionadd_room">
+   <property name="text">
+    <string>add room</string>
+   </property>
+  </action>
+  <action name="actionedit_room">
+   <property name="text">
+    <string>edit room</string>
+   </property>
+  </action>
+  <action name="actiondelete_room">
+   <property name="text">
+    <string>delete room</string>
+   </property>
+  </action>
+  <action name="actionshow_room">
+   <property name="text">
+    <string>show room</string>
+   </property>
+  </action>
+  <action name="actionshow_customer">
+   <property name="text">
+    <string>show customer</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>check out</string>
+   </property>
+  </action>
+  <action name="actionordinary_customer">
+   <property name="text">
+    <string>ordinary customer</string>
+   </property>
+  </action>
+  <action name="actionVIP_SVIP">
+   <property name="text">
+    <string>VIP / SVIP</string>
+   </property>
+  </action>
+  <action name="actionby_number">
+   <property name="text">
+    <string>by number</string>
+   </property>
+  </action>
+  <action name="actionby_name">
+   <property name="text">
+    <string>by name</string>
+   </property>
+  </action>
+  <action name="actionby_type">
+   <property name="text">
+    <string>by type</string>
+   </property>
+  </action>
+  <action name="actionby_check_in_time">
+   <property name="text">
+    <string>by check in time</string>
+   </property>
+  </action>
+  <action name="actionby_check_out_time">
+   <property name="text">
+    <string>by check out time</string>
+   </property>
+  </action>
+  <action name="actionby_point">
+   <property name="text">
+    <string>by point</string>
+   </property>
+  </action>
+  <action name="actionby_number_2">
+   <property name="text">
+    <string>by number</string>
+   </property>
+  </action>
+  <action name="actionby_type_2">
+   <property name="text">
+    <string>by type</string>
+   </property>
+  </action>
+  <action name="actionby_price">
+   <property name="text">
+    <string>by price</string>
+   </property>
+  </action>
+  <action name="actionby_usage">
+   <property name="text">
+    <string>by usage</string>
+   </property>
+  </action>
+  <action name="actionby_clean_situation">
+   <property name="text">
+    <string>by clean situation</string>
+   </property>
+  </action>
+  <action name="actionVIP_SVIP_2">
+   <property name="text">
+    <string>VIP / SVIP</string>
+   </property>
+  </action>
+  <action name="actionordinary">
+   <property name="text">
+    <string>ordinary</string>
+   </property>
+  </action>
+  <action name="actionshow_available_room">
+   <property name="text">
+    <string>show available room in</string>
+   </property>
+  </action>
+  <action name="actionshow_all">
+   <property name="text">
+    <string>show all</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
